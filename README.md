@@ -1,4 +1,3 @@
-# deleting of entire list
 class Node:
     def __init__(self,data):
         self.data=data
@@ -30,6 +29,7 @@ p.display()
 p.delete()
 print("after deleting")
 p.display()
+
 
 
 
