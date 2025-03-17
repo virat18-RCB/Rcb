@@ -7,7 +7,7 @@ class SSL:
         self.head=None
     def prepend(self,data):
         new_node=Node(data)
-        new_node.self=self.head
+        new_node.next=self.head
         self.head=new_node
     def delete(self):
         self.head=None
@@ -15,7 +15,7 @@ class SSL:
         c=self.head
         if not c:
             print("list is empty")
-        return
+            return
         while c:
             print(c.data,end="->")
             c=c.next
@@ -24,11 +24,12 @@ p=SSL()
 p.prepend(10)
 p.prepend(20)
 p.prepend(30)
-print("linked list after prepending:")
+print("before prepending")
 p.display()
 p.delete()
-print("after deleting")
+print("after deleation")
 p.display()
+
 
 
 
