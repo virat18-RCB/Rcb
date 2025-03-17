@@ -86,8 +86,24 @@ a.remove(20)
 
 print("After removing 20:")
 a.display()
+   #hanno
 
+   def ram(n,s,a,d):
+    if n>0:
+        ram(n-1,s,d,a)
+        print(f"move disk {n} from {s} to {d}")
+        ram(n-1,a,s,d)
+ram(3,'a','b',"c")
 
+#asss
+def process(stack):
+    stack.sort()  # Sorts the list in ascending order
+    return stack
+
+b = [4, 3, 1, 2]
+print(f"Before: {b}")
+process(b)
+print(f"After: {b}")
 
 
 
