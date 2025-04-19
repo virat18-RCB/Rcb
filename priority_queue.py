@@ -1,0 +1,10 @@
+p_queue=[]
+p_queue.append((2,"b"))
+p_queue.append((1,"a"))
+p_queue.append((3,"c"))
+print(p_queue)
+p_queue.sort()
+print("after sorting",p_queue)
+item=p_queue.pop(0)
+print("dequeue",item)
+print("final queue",p_queue)
