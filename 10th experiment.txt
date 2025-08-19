@@ -1,0 +1,10 @@
+10th experiment
+
+Go to cmd type the commands
+cd  C:\dependency-check (path)
+cd bin
+dependency-check.bat -h
+dependency-check --scan \C:\nxparser-master(path)\**\*.jar
+after that execution 
+go to file select the depedency-checker file 
+in this select the bin in the last one saved as dependency-check-report.html" open it show it

@@ -1,0 +1,82 @@
+11th experiment
+
+pip install pre-commit
+cd C:\Users\Chandu Gowda\Documents(document path)
+mkdir ch1(folder name)
+cd ch1
+git init (insialize the git)
+go to document select the ch1 folder add the document (demo)
+git status
+git add demo.txt
+git commit -m "first commit"
+git config --global user.name
+go to git hub create the new repository
+click on the code copy the path 
+in cmd type the (git remote add origin adn paste the GitHub path)(https://github.com/chandugowdacs/cha18.git)
+go to git leaks select this three line(
+repos:
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.24.2
+    hooks:
+      - id: gitleaks) paste the demo document
+change the file name as(.pre-commit-config.yaml)and save it
+pre-commit install
+git add .
+git commit -m "test"
+Detect hardcoded secrets.................................................Passed
+[master c37117d] test
+ 1 file changed, 5 insertions(+)
+ create mode 100644 .pre-commit-config.yaml
+
+C:\Users\Chandu Gowda\Documents\cha18>git add .
+
+next do the failed
+go to git leaks copy the path(
+➜  ~/code(master) gitleaks git -v
+
+    ○
+    │╲
+    │ ○
+    ○ ░
+    ░    gitleaks
+
+
+Finding:     "export BUNDLE_ENTERPRISE__CONTRIBSYS__COM=cafebabe:deadbeef",
+Secret:      cafebabe:deadbeef
+RuleID:      sidekiq-secret
+Entropy:     2.609850
+File:        cmd/generate/config/rules/sidekiq.go
+Line:        23
+Commit:      cd5226711335c68be1e720b318b7bc3135a30eb2
+Author:      John
+Email:       john@users.noreply.github.com
+Date:        2022-08-03T12:31:40
+Fingerprint: cd5226711335c68be1e720b318b7bc3135a30eb2:cmd/generate/config/rules/sidekiq.go:sidekiq-secret:23)
+next go to the demo file open and paste the path clik on the save
+type the below command
+git add .
+git commit -m "test2"
+C:\Users\Chandu Gowda\Documents\cha18>git commit -m "test2"
+Detect hardcoded secrets.................................................Failed
+- hook id: gitleaks
+- exit code: 1
+
+○
+    │╲
+    │ ○
+    ○ ░
+    ░    gitleaks
+
+Finding:     ...inding:     "export BUNDLE_ENTERPRISE__CONTRIBSYS__COM=REDACTED"
+Secret:      REDACTED
+RuleID:      sidekiq-secret
+Entropy:     2.609850
+File:        demo.txt
+Line:        10
+Fingerprint: demo.txt:sidekiq-secret:10
+
+9:14PM INF 1 commits scanned.
+9:14PM INF scanned ~582 bytes (582 bytes) in 62ms
+9:14PM WRN leaks found: 1
+
+
